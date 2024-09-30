@@ -29,7 +29,8 @@ cd $ROOT_DIR/
 django-admin startproject DynamicSite $ROOT_DIR/
 python3 manage.py startapp accounts
 python3 manage.py startapp core
-python3 manage.py makemigrations
+python3 manage.py makemigrations accounts
+python3 manage.py makemigrations core
 python3 manage.py migrate
 python3 manage.py runserver
 ```
