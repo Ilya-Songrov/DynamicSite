@@ -1,0 +1,154 @@
+
+body {
+	background-color: rgb(49, 55, 74);
+}
+
+.menu-fixed {
+	position: fixed;
+	top: 0;
+	width: 100%; 
+	z-index: 1000; 
+	/* border: 2px solid red; */
+	background-color: white;
+}
+
+
+
+.head {
+	position: relative;
+	width: 100vw;
+	height: 46vh;
+	background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url('animationVideo2.gif');
+	background-position: center;
+	opacity: 0.9;
+	background-size: cover;
+	margin-bottom: 20px;
+	margin-top: 70px;
+	/* border: 3px solid green; */
+}
+
+.overlap-block {
+	/* border: 2px solid blue; */
+	position: relative;
+	top: -110px;
+}
+
+.footer {
+	position: relative;
+	width: 100vw;
+	height: 20vh;
+	background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url('fotter.jpg');
+	background-size: 100vw 100vh; 
+	background-position: center;
+	opacity: 0.9;
+	background-size: cover;
+}
+
+.btn-txt {
+	font-family: 'Nunito Sans';
+	font-weight: 700;
+	color: rgba(82, 91, 117, 0.8);
+	font-size: 13px;
+}
+
+.location-block {
+	display: flex;
+	gap: 5px;
+}
+
+
+.footer-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1; 
+}
+
+
+.name-church {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 600;
+	color: rgba(82, 91, 117, 0.8);
+	font-size: 26px;
+}
+
+
+.text-container {
+	display: flex;
+	/* border: 2px solid red; */
+	justify-content: center;
+}
+
+.image-container {
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.logo {
+	max-width: 100%;
+   height: auto;
+}
+
+.text {
+	font-family: 'Nunito Sans';
+	font-weight: 800;
+	color: rgb(255, 255, 255);
+	font-size: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	top: 100px;
+}
+
+
+.text-title {
+	font-weight: 700;
+	font-size: 1.5vw;
+}
+
+.title-footer {
+	color: white;
+	opacity: 0.9;
+	font-size: 3.5vw;
+	padding-bottom: -100px;
+}
+
+.text-footer {
+	color: white;
+	opacity: 0.9;
+}
+
+
+
+
+.position-text-in-cart {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.card-title {
+	font-size: 1.5vw;
+}
+
+.show-more {
+	margin-bottom: 50px;
+}
+
+.card {
+	transition: transform 0.2s; /* add a transition effect */
+}
+
+.card:hover {
+	transform: scale(1.05); /* scale up on hover */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a subtle shadow */
+}
+
+.card:active {
+	transform: scale(0.95); /* scale down on click */
+}
+
+.card {
+	background: radial-gradient(circle, rgba(206,206,219,1) 0%, rgba(237,234,230,1) 100%);
+}
