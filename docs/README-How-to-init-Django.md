@@ -12,9 +12,6 @@ python3.10 -m venv ./venv
 source venv/bin/activate
 pip3 install django
 pip3 install psycopg2
-pip3 install djangorestframework
-pip3 install djangorestframework-jwt
-pip3 install djangorestframework-simplejwt
 pip3 install django-pgtrigger
 pip3 install django-bootstrap-v5
 pip3 install django-vite
@@ -27,12 +24,11 @@ deactivate
 ```
 cd $ROOT_DIR/
 django-admin startproject DynamicSite $ROOT_DIR/
-python3 manage.py startapp accounts
 python3 manage.py startapp core
-python3 manage.py makemigrations accounts
 python3 manage.py makemigrations core
 python3 manage.py migrate
 python3 manage.py runserver
+# python3 manage.py runserver 192.168.0.106:25252
 ```
 
 3. **Create user**

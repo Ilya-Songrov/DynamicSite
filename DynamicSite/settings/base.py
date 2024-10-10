@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'bootstrap5',
 
     # Local Apps (Your project's apps)
-    'accounts.apps.AccountsConfig',
     'core.apps.CoreConfig',
 ]
 
@@ -140,15 +139,5 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-    ]
-}
 
 

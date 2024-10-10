@@ -29,7 +29,6 @@ def index(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
     path('core/', include('core.urls')),
     path('', RedirectView.as_view(url='core/', permanent=False)),
 ]

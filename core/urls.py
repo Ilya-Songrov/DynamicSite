@@ -5,6 +5,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='dashboard/', permanent=False)),
-    re_path(r'^dashboard/$', views.DashboardView.as_view(), name='dashboard'),
+    path('', RedirectView.as_view(url='projects/', permanent=False)),
+    path('company/<slug:company_slug>/projects/', views.ProjectsView.as_view(), name='company_projects'),
+    path('company/<slug:company_slug>/project/description/<uuid:project_id>/', views.DescriptionView.as_view(), name='company_project_description'),
 ]
