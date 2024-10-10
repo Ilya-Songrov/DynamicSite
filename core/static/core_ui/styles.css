@@ -1,6 +1,9 @@
 
 body {
 	background-color: rgb(49, 55, 74);
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('background.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .menu-fixed {
@@ -8,11 +11,8 @@ body {
 	top: 0;
 	width: 100%; 
 	z-index: 1000; 
-	/* border: 2px solid red; */
 	background-color: white;
 }
-
-
 
 .head {
 	position: relative;
@@ -20,28 +20,24 @@ body {
 	height: 46vh;
 	background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url('animationVideo2.gif');
 	background-position: center;
-	opacity: 0.9;
+	opacity: 1;
 	background-size: cover;
 	margin-bottom: 20px;
-	margin-top: 70px;
-	/* border: 3px solid green; */
+	margin-top: 55px;
 }
 
 .overlap-block {
-	/* border: 2px solid blue; */
 	position: relative;
-	top: -110px;
+	top: -140px;
+	margin-bottom: -140px;
 }
 
 .footer {
 	position: relative;
 	width: 100vw;
 	height: 20vh;
-	background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url('fotter.jpg');
-	background-size: 100vw 100vh; 
-	background-position: center;
-	opacity: 0.9;
-	background-size: cover;
+	background-color: white;
+	opacity: 0.5;
 }
 
 .btn-txt {
@@ -70,13 +66,12 @@ body {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 600;
 	color: rgba(82, 91, 117, 0.8);
-	font-size: 26px;
+	font-size: clamp(14px, 2vw, 26px);
 }
 
 
 .text-container {
 	display: flex;
-	/* border: 2px solid red; */
 	justify-content: center;
 }
 
@@ -133,20 +128,20 @@ body {
 }
 
 .show-more {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .card {
-	transition: transform 0.2s; /* add a transition effect */
+	transition: transform 0.2s; 
 }
 
 .card:hover {
-	transform: scale(1.05); /* scale up on hover */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a subtle shadow */
+	transform: scale(1.05);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 .card:active {
-	transform: scale(0.95); /* scale down on click */
+	transform: scale(0.95);
 }
 
 .card {

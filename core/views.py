@@ -12,6 +12,12 @@ from .models import Company, Project
 
 
 
+class TestView(View):
+    def get(self, request):
+        context = {
+        }
+        return render(request, 'core_ui/test.html', context)
+    
 class ProjectsView(ListView):
     model = Project
     template_name = 'core_ui/projects.html'
