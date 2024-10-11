@@ -12,14 +12,6 @@ from .models import Company, Project
 
 
 
-class TestView(View):
-    def get(self, request):
-        company = get_object_or_404(Company, slug="svitlo-church")
-        context = {
-            "company": company
-        }
-        return render(request, 'core_ui/test.html', context)
-    
 class ProjectsView(ListView):
     model = Project
     template_name = 'core_ui/projects.html'

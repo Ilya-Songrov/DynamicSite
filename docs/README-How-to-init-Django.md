@@ -15,6 +15,7 @@ pip3 install psycopg2
 pip3 install django-pgtrigger
 pip3 install django-bootstrap-v5
 pip3 install django-vite
+pip3 install Pillow
 pip3 install gunicorn
 pip3.10 freeze > requirements.txt
 deactivate

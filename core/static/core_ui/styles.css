@@ -17,7 +17,7 @@ body {
 .head {
 	position: relative;
 	width: 100vw;
-	height: 46vh;
+	height: 66vh;
 	background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url('animationVideo2.gif');
 	background-position: center;
 	opacity: 1;
@@ -71,18 +71,22 @@ body {
 
 
 .text-container {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    align-items: center; /* Вирівнює елементи по вертикалі */
+    justify-content: center; /* Вирівнює елементи по горизонталі */
+    height: 100vh; /* Додає висоту контейнера для повного вирівнювання */
 }
 
 .image-container {
-	max-width: 200px;
-	max-height: 200px;
+    max-width: 200px; /* Обмежує максимальну ширину */
+    max-height: 200px; /* Обмежує максимальну висоту */
+    width: 100%; /* Робить ширину адаптивною */
+    height: auto; /* Зберігає пропорції зображення */
 }
 
 .logo {
 	max-width: 100%;
-   height: auto;
+   	height: auto;
 }
 
 .text {

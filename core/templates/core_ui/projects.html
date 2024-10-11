@@ -15,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
 		rel="stylesheet">
 
-	<title>Light_Of_Live - {{company.slug}}</title>
+	<title>{{company.slug}}</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 			<nav class="navbar container">
 				<div class="container-fluid title-one">
 					<a class="navbar-brand" href="#">
-						<img src="{% static 'core_ui/image/logoCriste.png' %}" alt="Logo" width="30" height="24"
+						<img src="{{ company.logo.url }}" alt="Logo" width="30" height="24"
 							class="d-inline-block align-text-top">
 						<span class="name-company logo-text ms-2">{{company.name}}</span>
 					</a>
@@ -41,96 +41,9 @@
 		</div>
 		<div class="head">
 			<div class="head-container container">
-				<div class="text-container position-relative pt-11 pb-15">
-					<!-- <div class="image-container">
-						<img src="{% static 'core_ui/image/logoBigCircleDark.png' %}" class="logo">
-					</div> -->
-					<h2 class="text text-center text-white mb-4">Do you want to join us and choose an activity?</h2>
+				<div class="text-container position-relative pt-11 pb-15 d-flex justify-content-center align-items-center" style="height: 100vh;">
+					<h2 class="text text-center text-white mb-4">{{ company.description }}</h2>
 				</div>
-				<!-- <div class="card-group">
-					<div class="row g-3">
-
-						<div class="col-md-4">
-							<a href="page1.html" class="card-link">
-								<div class="card text-bg-dark">
-									<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
-									<div class="card-img-overlay position-text-in-cart">
-										<h5 class="card-title">Плетіння військових сіток</h5>
-										<p class="card-text">Понеділок 17:30</p>
-									</div>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-4">
-							<a href="page2.html" class="card-link">
-								<div class="card text-bg-dark">
-									<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
-									<div class="card-img-overlay position-text-in-cart">
-										<h5 class="card-title">Англійська мова</h5>
-										<p class="card-text">Середа 19:00</p>
-									</div>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-4">
-							<a href="page3.html" class="card-link">
-								<div class="card text-bg-dark">
-									<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
-									<div class="card-img-overlay position-text-in-cart">
-										<h5 class="card-title">Програмування</h5>
-										<p class="card-text">Четвер 19:00</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4">
-							<a href="page1.html" class="card-link">
-								<div class="card text-bg-dark">
-									<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
-									<div class="card-img-overlay position-text-in-cart">
-										<h5 class="card-title">Плетіння військових сіток</h5>
-										<p class="card-text">Понеділок 17:30</p>
-									</div>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-4">
-							<a href="page2.html" class="card-link">
-								<div class="card text-bg-dark">
-									<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
-									<div class="card-img-overlay position-text-in-cart">
-										<h5 class="card-title">Англійська мова</h5>
-										<p class="card-text">Середа 19:00</p>
-									</div>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-4">
-							<a href="page3.html" class="card-link">
-								<div class="card text-bg-dark">
-									<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
-									<div class="card-img-overlay position-text-in-cart">
-										<h5 class="card-title">Програмування</h5>
-										<p class="card-text">Четвер 19:00</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-
-				</div>
-				<div class="show-more">
-					<div class="mt-5 position-relative text-center">
-						<hr class="mt-0 position-absolute top-50 translate-middle-y w-100">
-						<button class="btn btn-dark rounded-pill position-relative">
-							<span>Показати більше</span>
-						</button>
-					</div>
-				</div> -->
 			</div>
 		</div>
 		<div class="container overlap-block">
