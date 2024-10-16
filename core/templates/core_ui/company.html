@@ -6,15 +6,34 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="{% static 'core_ui/image/logoSmall.png' %}">
+	<link rel="icon" type="image/png" href="{{ company.logo.url }}">
 	<link rel="stylesheet" href="{% static 'core_ui/styles.css' %}">
 	<script src="{% static 'core_ui/script.js' %}"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
 		rel="stylesheet">
+	<title>{{ company.slug }}</title>
+	<style>
+		body {
+			background-color: rgb(49, 55, 74);
+			background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("{{ company.background.url }}");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
 
-	<title>{{company.slug}}</title>
+		.header {
+			position: relative;
+			width: 100vw;
+			height: 66vh;
+			background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url("{{ company.animation_video.url }}");
+			background-position: center;
+			opacity: 1;
+			background-size: cover;
+			margin-bottom: 20px;
+			margin-top: 55px;
+		}
+	</style>
 </head>
 
 <body>
@@ -25,7 +44,7 @@
 					<a class="navbar-brand" href="#">
 						<img src="{{ company.logo.url }}" alt="Logo" width="30" height="24"
 							class="d-inline-block align-text-top">
-						<span class="name-company logo-text ms-2">{{company.name}}</span>
+						<span class="name-company logo-text ms-2">{{ company.name }}</span>
 					</a>
 					<a class="btn btn-link text-body-tertiary p-0 me-2 me-lg-0" href="#!">
 						<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24"
@@ -38,10 +57,11 @@
 				</div>
 			</nav>
 		</div>
-		<div class="head">
+
+		<div class="header">
 			<div class="head-container container">
 				<div class="text-container position-relative pt-11 pb-15 d-flex justify-content-center align-items-center"
-					style="height: 100vh;">
+					style="height: 100%;">
 					<h2 class="text text-center text-white mb-4">{{ company.description }}</h2>
 				</div>
 			</div>
@@ -55,35 +75,28 @@
 					<div class="col-md-6 col-xl-6">
 						<a href="{% url 'project' company.slug project.id %}" class="card-link">
 							<div class="card text-bg-dark">
-								<img src="{% static 'core_ui/image/1.jpg' %}" class="card-img" alt="...">
+								<img src="{{ project.background.url }}" class="card-img" alt="...">
 								<div class="card-img-overlay position-text-in-cart">
 									<div class="backdrop-faded">
 										<h3 class="text-underline fs-7 fs-lg-6 text-white fw-bold mb-2">
-											<font style="vertical-align: inherit;">
-												<font style="vertical-align: inherit;">{{ project.title }}</font>
-											</font>
+											{{ project.title }}
 										</h3>
 										<div class="location-block">
 											<svg class="svg-inline--fa fa-location-dot text-primary me-2"
 												aria-hidden="true" focusable="false" data-prefix="fas"
 												data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-												viewBox="0 0 384 512" data-fa-i2svg="" width="24" height="24">
+												viewBox="0 0 384 512" width="24" height="24">
 												<path fill="currentColor"
 													d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
 												</path>
 											</svg>
 											<h5 class="text-secondary-lighter fw-normal mb-3">
-												<font style="vertical-align: inherit;">
-													<font style="vertical-align: inherit;">{{ project.description }}
-													</font>
-												</font>
+												{{ project.description }}
 											</h5>
 										</div>
 										<div class="d-sm-flex d-md-block d-lg-flex flex-between-center">
 											<h3 class="text-white fw-bold mb-3 mb-sm-0 mb-md-3 mb-lg-0 fs-7 fs-lg-6">
-												<font style="vertical-align: inherit;">
-													<font style="vertical-align: inherit;">Оновлено: {{project.updated_at }}</font>
-												</font>
+												Оновлено: {{ project.updated_at }}
 											</h3>
 										</div>
 									</div>
@@ -98,6 +111,7 @@
 			</div>
 		</div>
 		{% endblock %}
+
 		<div class="show-more">
 			<div class="mt-5 position-relative text-center">
 				<hr class="mt-0 position-absolute top-50 translate-middle-y w-100">
@@ -106,6 +120,7 @@
 				</button>
 			</div>
 		</div>
+
 		<div class="footer">
 			<div class="footer-container container">
 				<div class="footer-container-text">
@@ -130,9 +145,11 @@
 				</div>
 			</div>
 		</div>
+
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-			</script>
+		</script>
+	</div>
 </body>
 
 </html>

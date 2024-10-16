@@ -1,9 +1,19 @@
 
 body {
 	background-color: rgb(49, 55, 74);
-	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('background.webp');
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.header {
+	position: relative;
+	width: 100vw;
+	height: 66vh;
+	background-position: center;
+	opacity: 1;
+	background-size: cover;
+	margin-bottom: 20px;
+	margin-top: 55px;
 }
 
 .menu-fixed {
@@ -12,18 +22,6 @@ body {
 	width: 100%; 
 	z-index: 1000; 
 	background-color: white;
-}
-
-.head {
-	position: relative;
-	width: 100vw;
-	height: 66vh;
-	background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url('animationVideo2.gif');
-	background-position: center;
-	opacity: 1;
-	background-size: cover;
-	margin-bottom: 20px;
-	margin-top: 55px;
 }
 
 .overlap-block {

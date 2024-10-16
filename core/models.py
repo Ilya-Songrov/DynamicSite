@@ -9,6 +9,8 @@ class Company(models.Model):
     name = models.CharField(max_length=255, unique=True, db_column='name')
     description = models.TextField(db_column='description')
     logo = models.ImageField(db_column='logo')
+    background = models.ImageField(db_column='background')
+    animation_video = models.ImageField(db_column='animation_video')
     created_at = models.DateTimeField(auto_now_add=True, editable=False, db_column='created_at')
     updated_at = models.DateTimeField(auto_now=True, editable=False, db_column='updated_at')
 
@@ -38,6 +40,7 @@ class Project(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name='projects')
     title = models.CharField(max_length=255, unique=True, db_column='title')
     description = models.TextField(db_column='description')
+    background = models.ImageField(db_column='background')
     created_at = models.DateTimeField(auto_now_add=True, editable=False, db_column='created_at')
     updated_at = models.DateTimeField(auto_now=True, editable=False, db_column='updated_at')
 

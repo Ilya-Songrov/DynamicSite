@@ -11,7 +11,7 @@ class CompanyAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('company', 'title', 'description', 'created_at', 'updated_at')
+    list_display = ('company', 'title', 'description', 'background', 'created_at', 'updated_at')
     list_filter = ('company',)
     search_fields = ('title', 'description')
     readonly_fields = ('id', 'created_at', 'updated_at')
