@@ -12,10 +12,10 @@ from .models import Company, Project
 
 
 
-class ProjectsView(ListView):
-    model = Project
-    template_name = 'core_ui/projects.html'
-    context_object_name = 'projects'
+class CompanyView(ListView):
+    model = Company
+    template_name = 'core_ui/company.html'
+    context_object_name = 'company'
 
     def get_queryset(self):
         company_slug = self.kwargs.get('company_slug')
@@ -25,21 +25,19 @@ class ProjectsView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         company_slug = self.kwargs.get('company_slug')
-        company = get_object_or_404(Company, slug=company_slug)
-        context['company'] = company
+        context['company'] = get_object_or_404(Company, slug=company_slug)
         return context
     
 
-class DescriptionView(DetailView):
+class ProjectView(DetailView):
     model = Project
-    template_name = 'core_ui/project_description.html'
+    template_name = 'core_ui/project.html'
     context_object_name = 'project'
 
     def get_object(self):
         company_slug = self.kwargs.get('company_slug')
         project_id = self.kwargs.get('project_id')
-        company = get_object_or_404(Company, slug=company_slug)
-        project = get_object_or_404(Project, id=project_id, company=company)
+        project = get_object_or_404(Project, id=project_id, company_slug=company_slug)
         return project
 
     def get_context_data(self, **kwargs):
