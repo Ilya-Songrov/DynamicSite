@@ -21,18 +21,6 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
-
-		.header {
-			position: relative;
-			width: 100vw;
-			height: 66vh;
-			background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 42, 42, 0.5)), url("{{ company.animation_video.url }}");
-			background-position: center;
-			opacity: 1;
-			background-size: cover;
-			margin-bottom: 20px;
-			margin-top: 55px;
-		}
 	</style>
 </head>
 
@@ -58,13 +46,10 @@
 			</nav>
 		</div>
 
-		<div class="header">
-			<div class="head-container container">
-				<div class="text-container position-relative pt-11 pb-15 d-flex justify-content-center align-items-center"
-					style="height: 100%;">
-					<h2 class="text text-center text-white mb-4">{{ company.description }}</h2>
-				</div>
-			</div>
+		<div class="video-header video-header overlay bg-opacity-50">
+			<video class="bg-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+				<source src="{{ company.animation_video.url }}" type="video/mp4"/>
+			</video>
 		</div>
 
 		{% block content %}
