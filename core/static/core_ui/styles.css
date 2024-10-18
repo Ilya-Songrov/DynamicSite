@@ -149,7 +149,7 @@ body {
     width: 100%; /* Заповнити ширину картки */
 	height: auto;
     object-fit: cover; /* Вирівняти зображення без спотворення */
-    /* filter: blur(5px); Застосувати ефект розмиття */
+    /* filter: blur(5px); */
 }
 
 .video-header {
