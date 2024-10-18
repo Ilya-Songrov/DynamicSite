@@ -37,7 +37,7 @@ class ProjectView(DetailView):
     def get_object(self):
         company_slug = self.kwargs.get('company_slug')
         project_id = self.kwargs.get('project_id')
-        project = get_object_or_404(Project, id=project_id, company_slug=company_slug)
+        project = get_object_or_404(Project, id=project_id, company__slug=company_slug)
         return project
 
     def get_context_data(self, **kwargs):
