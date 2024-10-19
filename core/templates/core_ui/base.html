@@ -20,25 +20,27 @@
 </head>
 
 <body>
-	<div class="menu-sticky-top">
-		<nav class="navbar navbar-landing navbar-expand-lg container-medium">
-			<div class="container-fluid title-one">
-				<a class="navbar-brand" href="#">
-					<img src="{{ company.logo.url }}" alt="Logo" width="30" height="24"
-						class="d-inline-block align-text-top">
-					<span class="name-company logo-text ms-2">{{ company.name }}</span>
-				</a>
-				<a class="span btn-link text-body-tertiary p-0 me-2 me-lg-0" href="#!">
-					<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24"
-						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-						stroke-linejoin="round" class="feather feather-user" style="width: 24px; height: 24px">
-						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-						<circle cx="12" cy="7" r="4"></circle>
-					</svg>
-				</a>
-			</div>
-		</nav>
-	</div>	
+	<div class="menu-sticky-wrapper">
+		<div class="menu-sticky-top">
+			<nav class="navbar navbar-landing navbar-expand-lg container-medium">
+				<div class="container-fluid title-one">
+					<a class="navbar-brand" href="#">
+						<img src="{{ company.logo.url }}" alt="Logo" width="30" height="24"
+							class="d-inline-block align-text-top">
+						<span class="name-company logo-text ms-2">{{ company.name }}</span>
+					</a>
+					<a class="span btn-link text-body-tertiary p-0 me-2 me-lg-0" href="#!">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24"
+							fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" class="feather feather-user" style="width: 24px; height: 24px">
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+							<circle cx="12" cy="7" r="4"></circle>
+						</svg>
+					</a>
+				</div>
+			</nav>
+		</div>	
+	</div>
 
 	{% block content %}{% endblock %}
 

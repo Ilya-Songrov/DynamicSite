@@ -16,10 +16,17 @@ body {
 	margin-top: 55px;
 }
 
+.menu-sticky-wrapper {
+	width: 100%;
+	background-color: white;
+}
+
 .menu-sticky-top {
 	position: sticky;
 	top: 0;
-	width: 100%; 
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
 	z-index: 1020; 
 	background-color: white;
 }
@@ -159,8 +166,11 @@ body {
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
-	margin-bottom: 20px;
-	margin-top: 55px;
+}
+
+.bg-video {
+	object-fit: cover;
+	width: 100vw;
 }
 
 .nav-link {
