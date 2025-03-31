@@ -2,19 +2,8 @@
 
 {% load static %}
 
-{% block styles %}
-<style>
-	body {
-		background-color: rgb(49, 55, 74);
-		background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("{{ company.background.url }}");
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-</style>
-{% endblock %}
-
 {% block content %}
-<div class="video-header video-header overlay bg-opacity-50">
+<div class="video-header video-header overlay bg-opacity-50" style="background-image:url({{ company.animation_image.url }});">
 	<video class="bg-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
 		<source src="{{ company.animation_video.url }}" type="video/mp4"/>
 	</video>
@@ -43,7 +32,7 @@
 										</path>
 									</svg>
 									<h5 class="text-black fw-normal mb-3">
-										{{ project.description }}
+										{{ project.title }}
 									</h5>
 								</div>
 								<div class="d-sm-flex d-md-block d-lg-flex flex-between-center">

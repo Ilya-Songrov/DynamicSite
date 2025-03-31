@@ -2,44 +2,30 @@
 
 {% load static %}
 
-{% block styles %}
-<style>
-	body {
-		background-color: rgb(49, 55, 74);
-		background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("{{ company.background.url }}");
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-</style>
-{% endblock %}
-
 {% block content %}
 
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-md-8 offset-md-2">
 			<div class="course-description">
-				<h2>Опис Курсy - {{project.title}}</h2>
-				<p>Цей курс призначений для новачків, які хочуть навчитися основам англійської мови. Ви дізнаєтеся про основні граматичні правила, розширите свій словниковий запас і розвинете навички розмовної мови. Заняття проходять у дружній атмосфері, що сприяє легкому засвоєнню матеріалу.</p>
-				
-				<h2>description</h2>
+				<h2>{{project.title}}</h2>
 				<p>{{project.description}}</p>
-				
+
 				<h3>Тривалість Курсy</h3>
 				<p>{{ project.created_at }}</p>
-				
+
 				<h3>Час занять</h3>
 				<p>{{ project.updated_at }}</p>
 
 				<h3>Вартість</h3>
 				<p>{{ company.name }}</p>
 
-				<a href="#" class="btn btn-primary mt-4">Записатися на курс</a>
+				<a href="#" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#signupModal">Записатися</a>
+
+
 			</div>
 		</div>
 	</div>
 </div>
 
 {% endblock %}
-
-

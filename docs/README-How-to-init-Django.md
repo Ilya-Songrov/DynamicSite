@@ -40,5 +40,5 @@ python3 manage.py createsuperuser
 
 4. **Run via gunicorn**
 ```
-gunicorn --workers 3 --timeout 120 DynamicSite.wsgi:application
+gunicorn --workers 3 --timeout 120 DynamicSite.wsgi:application --bind 192.168.0.106:25252
 ```
